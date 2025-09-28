@@ -530,3 +530,68 @@ footer p:hover {
     font-size: 1.1rem;
   }
 }
+/* === Mobile Responsive untuk HP === */
+@media (max-width: 768px) {
+  /* Header */
+  header h1 {
+    font-size: 1.5rem;  /* lebih kecil */
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  header .logo {
+    max-width: 50px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Navbar */
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Hero Section */
+  #hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .cta-buttons .btn {
+    display: block;
+    width: 80%;
+    margin: 0.5rem auto;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* Feature Box */
+  #features {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  .feature-box {
+    max-width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}
