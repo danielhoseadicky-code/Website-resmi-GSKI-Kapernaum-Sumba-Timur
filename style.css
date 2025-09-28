@@ -1,0 +1,532 @@
+header .logo {
+  display: block;          /* biar berada di baris sendiri */
+  margin: 0 auto 1rem auto; /* center horizontal + jarak bawah 1rem */
+  max-width: 70px;        /* atur ukuran logo */
+  height: auto;             /* tetap proporsional */
+}
+
+
+header {
+  text-align: center;  /* ini bikin h1 & p berada di tengah */
+  padding: 2rem 1rem;  /* jarak atas-bawah */
+}
+
+@font-face {
+  font-family: 'Zalando Sans Expanded';
+  src: url('fonts/ZalandoSansExpanded-Italic-VariableFont_wght.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header h1, header p {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+
+nav {
+  background: #34495e;       /* warna navbar */
+  display: flex;             /* bikin link berjajar horizontal */
+  justify-content: center;   /* posisinya di tengah */
+  gap: 2rem;                 /* jarak antar link */
+  padding: 1rem 0;           /* jarak atas-bawah */
+}
+
+nav a {
+  color: white;              /* teks putih biar terlihat */
+  text-decoration: none;     /* hilangkan garis bawah default */
+  font-weight: bold;
+  padding: 0.5rem 1rem;      /* kasih ruang biar seperti tombol */
+  border-radius: 5px;        /* biar rounded sedikit */
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #2c3e50;       /* efek hover biar kayak tombol */
+  text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('images/churchhero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h2 {
+  font-family: 'Garamond', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 0 auto 2rem auto;  /* center horizontal + margin bawah 2rem */
+  max-width: 1100px;          /* lebar maksimal agar tidak terlalu melebar */
+  line-height: 1.6;          /* spasi antar baris lebih nyaman */
+  text-align: center;         /* pastikan teks center */
+}
+
+
+.cta-buttons .btn {
+  display: inline-block;
+  background: #e67e22;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+#features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.feature-box {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  font-family: 'Garamond', serif;
+  font-size: 1.2rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  flex: 1;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+footer {
+  background: #2c3e50;       /* warna gelap */
+  color: white;
+  text-align: center;        /* teks di tengah */
+  padding: 2rem 1rem;        /* jarak atas-bawah */
+  position: relative;
+  overflow: hidden;          /* supaya efek animasi aman */
+}
+
+footer, footer p {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+/* Animasi sederhana: teks sedikit naik saat hover */
+footer p {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer p:hover {
+  transform: translateY(-5px);  /* naik 5px */
+  color: #e67e22;               /* ganti warna saat hover */
+  cursor: default;               /* biar tetap non-clickable */
+}
+
+#pelayan {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#pelayan h3 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pelayan-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pelayan-item {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1 1 220px;       /* responsive */
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pelayan-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.pelayan-item img {
+  width: 100%;
+  border-radius: 50%;      /* biar foto bulat */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.pelayan-item h4 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.pelayan-item .jabatan {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.pelayan-item .deskripsi {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+/* Section Pelayan / Struktur Organisasi */
+#pelayan {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+#pelayan h3 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pelayan-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pelayan-item {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 15px;            /* rounded card */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1 1 220px;                 /* responsive */
+  max-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pelayan-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.pelayan-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;             /* rasio 1:1 */
+  object-fit: cover;                /* crop agar pas kotak */
+  border-radius: 15px;              /* rounded corners */
+  margin-bottom: 1rem;
+}
+
+.pelayan-item h4 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.pelayan-item .jabatan {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.pelayan-item .deskripsi {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .pelayan-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pelayan-item {
+    max-width: 90%;
+  }
+}
+.pelayan-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;      /* tetap kotak 1:1 untuk rasio */
+  object-fit: cover;         /* crop agar memenuhi kotak */
+  border-radius: 50%;        /* bulat sempurna */
+  margin-bottom: 1rem;
+}
+
+/* Hero Section Tentang Kami tanpa gambar */
+#about-hero {
+  padding: 2rem 1rem;             /* jarak lebih rapat */
+  text-align: center;
+  color: #000;                     /* teks hitam */
+  font-family: 'Zalando Sans Expanded', sans-serif;
+}
+
+#about-hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;           /* lebih dekat ke deskripsi */
+}
+
+#about-hero p {
+  max-width: 800px;                 /* tidak terlalu melebar */
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Profil Gereja */
+#profil {
+  padding: 1rem 1rem;               /* lebih rapat */
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Garamond', serif;
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Visi & Misi Box tetap */
+#visi-misi {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+#visi-misi .box {
+  background: #f4f4f4;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  max-width: 400px;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  text-align: justify;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#visi-misi .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #visi-misi {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #visi-misi .box {
+    max-width: 90%;
+  }
+}
+
+/* Hero Section Jadwal */
+#jadwal-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#jadwal-hero h2 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: 3rem; /* lebih besar */
+  margin-bottom: 1rem;
+}
+
+#jadwal-hero p {
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 1.35rem; /* lebih besar */
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Tabel Jadwal */
+#jadwal-tabel {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+#jadwal-tabel table {
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 750px;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#jadwal-tabel th, #jadwal-tabel td {
+  padding: 1.2rem 1.8rem;
+  text-align: center;
+  font-size: 1.15rem; /* lebih besar */
+}
+
+#jadwal-tabel thead {
+  background: linear-gradient(90deg, #34495e, #2c3e50);
+  color: white;
+  font-size: 1.25rem;
+}
+
+#jadwal-tabel tbody tr {
+  background: #f4f4f4;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+#jadwal-tabel tbody tr:nth-child(even) {
+  background: #eaeaea;
+}
+
+#jadwal-tabel tbody tr:hover {
+  background: #dfe6e9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #jadwal-tabel table {
+    width: 100%;
+  }
+
+  #jadwal-tabel th, #jadwal-tabel td {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  #jadwal-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  #jadwal-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Hero Section Kontak */
+#kontak-hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+#kontak-hero h2 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#kontak-hero p {
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 1.35rem;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* Info Kontak Box */
+#info-kontak {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.kontak-box {
+  background: #f4f4f4;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.kontak-box h3 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.kontak-box p {
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+/* Hover efek ringan */
+.kontak-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Form Kontak */
+#form-kontak {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#form-kontak h3 {
+  font-family: 'Zalando Sans Expanded', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#form-kontak p {
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #info-kontak {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kontak-box {
+    max-width: 90%;
+  }
+
+  #kontak-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  #kontak-hero p,
+  .kontak-box p,
+  #form-kontak p {
+    font-size: 1.1rem;
+  }
+}

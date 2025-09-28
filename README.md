@@ -1,0 +1,1 @@
+# Website-resmi-GSKI-Kapernaum-Sumba-Timur
